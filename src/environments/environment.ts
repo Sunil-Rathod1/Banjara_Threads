@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/api',
-  googleOAuthUrl: 'http://localhost:5000/api/auth/google',
+  apiUrl: 'https://banjara-threads-be.onrender.com/api',
+  googleOAuthUrl: 'https://banjara-threads-be.onrender.com/api/auth/google',
 };
