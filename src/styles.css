@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Rathod Banjara Threads — CSS Custom Properties ─────────────────────────── */
+:root {
+  --color-maroon:  #7b1c1c;
+  --color-maroon-dark: #330b0b;
+  --color-gold:    #c9a84c;
+  --color-gold-light: #e8b534;
+  --color-ivory:   #faf6f0;
+  --font-serif:    'Playfair Display', Georgia, serif;
+  --font-sans:     Inter, system-ui, sans-serif;
+}
+
+/* ── Base styles ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: #faf6f0;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-serif); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #e8b534, #b08d3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+a, button { transition: all 0.2s ease-in-out; }
+
+/* ── Luxury animations ────────────────────────────────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* ── Luxury input line style (shared between login & register) ─────────────── */
+.luxury-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #d4c5b5;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.25s;
+  font-family: 'Inter', sans-serif;
+}
+.luxury-input::placeholder { color: #b8a898; font-weight: 300; }
+.luxury-input:focus { border-bottom-color: #c9a84c; }
+
+/* Selection highlight in brand gold */
+::selection { background: rgba(201,168,76,0.25); color: inherit; }
